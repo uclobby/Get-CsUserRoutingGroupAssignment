@@ -1,23 +1,44 @@
-﻿<#
-	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-	SOFTWARE.
+
+<#PSScriptInfo
+
+.VERSION 1.1
+
+.GUID 3287cc5d-f9ff-4680-84d7-241f80db3241
+
+.AUTHOR David Paulino
+
+.COMPANYNAME UC Lobby
+
+.COPYRIGHT
+
+.TAGS Lync LyncServer SkypeForBusiness SfBServer WindowsFabric
+
+.LICENSEURI
+
+.PROJECTURI
+
+.ICONURI
+
+.EXTERNALMODULEDEPENDENCIES 
+
+.REQUIREDSCRIPTS
+
+.EXTERNALSCRIPTDEPENDENCIES
+
+.RELEASENOTES
+  Version 1.0: 2019/07/16 - Initial release.
+  Version 1.1: 2023/10/07 - Updated to publish in PowerShell Gallery.
+
+.PRIVATEDATA
+
 #>
 
+<# 
 
-<#
-.DESCRIPTION
-	This script returns the current routing group count from Lync/Skype for Business Front Ends.
+.DESCRIPTION 
+ Returns the routing group user count from Lync/Skype for Business Front Ends. 
 
-.NOTES
-  Version      	   		: 1.0
-  Author    			: David Paulino https://uclobby.com
-  
-#>
+#> 
 
 [CmdletBinding()]
 param(
@@ -147,3 +168,5 @@ if($ComputersInPool){
 } else {
     Write-Warning "Invalid/unknown Pool FQDN."
 }
+
+
